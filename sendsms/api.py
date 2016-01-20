@@ -65,13 +65,13 @@ def get_connection(path=None, fail_silently=False, **kwargs):
         mod = import_module(mod_name)
     except AttributeError as e:
         raise ImproperlyConfigured(
-            u'Error importing sms backend module %s: "%s"' % (mod_name, e))
+            'Error importing sms backend module %s: "%s"' % (mod_name, e))
 
     try:
         klass = getattr(mod, klass_name)
     except AttributeError:
         raise ImproperlyConfigured(
-            u'Module "%s" does not define a "%s" class' % (
+            'Module "%s" does not define a "%s" class' % (
                 mod_name, klass_name))
 
     return klass(fail_silently=fail_silently, **kwargs)

@@ -92,7 +92,7 @@ class SmsBackend(BaseSmsBackend):
         if response_msg == 'OK':
             try:
                 if "," in response_code:
-                    codes = map(int, response_code.split(","))
+                    codes = list(map(int, response_code.split(",")))
                 else:
                     codes = [int(response_code)]
 

@@ -82,7 +82,7 @@ class SmsBackend(BaseSmsBackend):
         """
         count = 0
         for message in messages:
-            message_body = unicodedata.normalize('NFKD', unicode(message.body)).encode('ascii', 'ignore')
+            message_body = unicodedata.normalize('NFKD', str(message.body)).encode('ascii', 'ignore')
             for tel_number in message.to:
                 try:
                     self.client.send(tel_number, message_body, getattr(settings, 'SMS_SLUZBA_API_USE_POST', True))

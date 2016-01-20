@@ -41,7 +41,7 @@ class SmsBackend(BaseSmsBackend):
         return len(messages)
 
 def render_message(message):
-    return u"""from: %(from)s\nto: %(to)s\nflash: %(flash)s\n%(body)s""" % {
+    return """from: %(from)s\nto: %(to)s\nflash: %(flash)s\n%(body)s""" % {
         'from': message.from_phone,
         'to': ", ".join(message.to),
         'flash': message.flash,
