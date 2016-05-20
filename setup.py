@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 version = __import__('sendsms').__version__
 
 setup(
-    name="django-sendsms-pebble",
+    name="django-sendsms",
     version="0.3.0-ipso.1",
     url='http://github.com/mypebble/django-sendsms',
     license='BSD',
