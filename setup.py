@@ -4,7 +4,7 @@ version = __import__('sendsms').__version__
 
 setup(
     name="django-sendsms",
-    version="0.3.0-ipso.1",
+    version="0.3.0-ipso.2",
     url='http://github.com/mypebble/django-sendsms',
     license='BSD',
     platforms=['OS Independent'],
